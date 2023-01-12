@@ -16,3 +16,5 @@ function openInExplorer
 
 Set-Alias o openInExplorer
 Set-Alias open openInExplorer
+
+Set-Alias grep rg
