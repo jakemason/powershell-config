@@ -25,3 +25,11 @@ Set-Alias open openInExplorer
 # Alias grep to ripgrep which I _should_ always have 
 # installed on Windows. :)
 Set-Alias grep rg
+
+Set-Alias hexdump Format-Hex
+
+function cmake64Bit
+{
+  cmake -DCMAKE_GENERATOR_PLATFORM=x64 @args
+}
+Set-Alias cmake64 cmake64Bit
