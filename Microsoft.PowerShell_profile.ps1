@@ -6,6 +6,7 @@ $env:RBENV_ROOT = "e:\tools\rbenv"
 
 & "$env:RBENV_ROOT\rbenv\bin\rbenv.ps1" init
 
+$Global:SITES = "E:\DevApps\Sites"
 
 # Prefer Neovim over regular vim
 Set-Alias vim nvim
@@ -47,6 +48,10 @@ function cmake64Bit
   cmake -DCMAKE_GENERATOR_PLATFORM=x64 @args
 }
 Set-Alias cmake64 cmake64Bit
+
+function t {
+  bash -c "/mnt/e/Tools/todotxt/todo.sh $args"
+}
 
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
